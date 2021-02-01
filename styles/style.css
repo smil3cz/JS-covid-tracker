@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+#container {
+  background-color: cadetblue;
+}
+
+.country__flag {
+  width: 25%;
+}
+
+.title__bold {
+  font-weight: 700;
+}
