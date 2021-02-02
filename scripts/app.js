@@ -60,14 +60,16 @@ const dataToRender = (data) => {
   data.forEach((item) => {
     htmlElement.id = item.countryCode;
     htmlElement.html = `
-    <div class="country">
+    <div class="country__container">
       <img class="country__flag" src="${item.countryFlag}">
-      <h1 class="country__name">${item.countryName}</h1>
-      <p class="country__population"><span class="title__bold">Population:</span>&nbsp;${item.countryPopulation}</p>
-      <p class="country__region"><span class="title__bold">Region:</span>&nbsp;${item.countryRegion}</p>
-      <p class="country__total-confirmed"><span class="title__bold">Total confirmed:</span>&nbsp;${item.totalConfirmed}</p>
-      <p class="country__total-recovered"><span class="title__bold">Total recovered:</span>&nbsp;${item.totalRecovered}</p>
-      <p class="country__total-deaths"><span class="title__bold">Total deaths:</span>&nbsp;${item.totalDeaths}</p>
+      <div class="country__data">
+        <h1 class="country__name">${item.countryName}</h1>
+        <p class="country__population"><span class="title__bold">Population:</span><span class="country__text">${item.countryPopulation.toLocaleString()}</span></p>
+        <p class="country__region"><span class="title__bold">Region:</span><span class="country__text">${item.countryRegion.toLocaleString()}</span></p>
+        <p class="country__total-confirmed"><span class="title__bold">Total confirmed:</span><span class="country__text">${item.totalConfirmed.toLocaleString()}</span></p>
+        <p class="country__total-recovered"><span class="title__bold">Total recovered:</span><span class="country__text">${item.totalRecovered.toLocaleString()}</span></p>
+        <p class="country__total-deaths"><span class="title__bold">Total deaths:</span><span class="country__text">${item.totalDeaths.toLocaleString()}</span></p>
+      </div>
     </div>
     `;
     DATA_RENDER.push(htmlElement);

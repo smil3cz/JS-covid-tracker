@@ -1,3 +1,12 @@
+:root {
+  --violet-grad: rgb(194, 148, 216);
+  --blue-grad: rgb(79, 110, 194);
+  --header-background: rgba(26, 23, 29, 0.9);
+  --black-shadow: rgba(0, 0, 0, 0.4);
+  --white-text: rgb(255, 255, 255);
+  --whitesmoke-country: rgb(236, 231, 231);
+}
+
 *,
 *::before,
 *::after {
@@ -9,17 +18,105 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+body {
+  background: linear-gradient(to right, var(--violet-grad), var(--blue-grad));
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 5vh;
+  background-color: var(--header-background);
+  box-shadow: 0 2rem 5rem 1rem var(--black-shadow);
+}
+
+.header__logo {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--white-text);
+}
+
+.header > img {
+  height: 70%;
+  margin-right: 2rem;
 }
 
 #container {
-  background-color: cadetblue;
-}
-
-.country__flag {
-  width: 25%;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, min-content));
+  grid-auto-rows: max-content;
+  gap: 4rem;
+  justify-items: center;
+  justify-content: center;
 }
 
 .title__bold {
   font-weight: 700;
+}
+
+.country__container {
+  width: 30rem;
+  background: var(--whitesmoke-country);
+  font-size: 1.6rem;
+  box-shadow: 0 2rem 5rem 1rem var(--black-shadow);
+  border-radius: 10px;
+}
+
+.country__data {
+  padding: 1rem;
+}
+
+.country__container > img {
+  width: 30rem;
+  height: 17rem;
+  object-fit: cover;
+}
+
+.country__container p:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.country__name {
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.country__text {
+  float: right;
+}
+
+.title__bold {
+  font-weight: 700;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-text);
+  height: 5vh;
+  background-color: var(--header-background);
 }
