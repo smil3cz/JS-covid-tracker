@@ -42,7 +42,7 @@ body {
   justify-content: center;
   position: fixed;
   width: 100%;
-  height: 5vh;
+  height: 10vh;
   background-color: var(--header-background);
   box-shadow: 0 2rem 5rem 1rem var(--black-shadow);
 }
@@ -113,6 +113,10 @@ body {
 }
 
 .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
